@@ -1,80 +1,103 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blog Musical - Canciones</title>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Musical - Canciones</title>
   <link rel="stylesheet" href="./dist/output.css">
-  </head>
-  <body class="bg-music-gradient text-gray-800">
-    <header class="header-surface shadow-sm">
-      <div class="flex items-center justify-between max-w-4xl panel-surface p-4 mx-auto">
-        <div class="flex items-center gap-3">
-          <img src="./src/img/cover.svg" alt="Logo" class="w-10 h-10" />
-          <h1 class="text-xl font-semibold">Blog Musical</h1>
-        </div>
-        <nav>
-          <ul class="flex gap-4 text-sm">
-            <li><a class="text-gray-600 hover:underline" href="./index.html">Inicio</a></li>
-            <li><a class="text-blue-600" aria-current="page" href="./cancion.html">Canciones</a></li>
-            <li><a class="text-gray-600 hover:underline" href="./acerca.html">Acerca</a></li>
-          </ul>
-        </nav>
+</head>
+
+<body class="text-gray-800 bg-music-gradient">
+  <header class="shadow-sm header-surface">
+    <div class="flex items-center justify-between max-w-4xl p-4 mx-auto panel-surface">
+      <div class="flex items-center gap-3">
+        <img src="./src/img/logo.svg" alt="Logo" class="w-10 h-10" />
+        <h1 class="text-xl font-semibold">MUSITC</h1>
       </div>
-    </header>
-
-    <main class="max-w-4xl p-6 mx-auto">
-      <!-- Visor único de canción -->
-      <section id="viewer" class="mt-6">
-        <div class="max-w-3xl p-6 mx-auto bg-white rounded-lg shadow">
-          <header class="flex items-start gap-4">
-            <div class="flex-1">
-              <h2 id="post-title" class="text-2xl font-bold">Cargando...</h2>
-              <p id="post-meta" class="mt-1 text-sm text-gray-500"></p>
-            </div>
-          </header>
-
-          <div class="mt-4">
-            <!-- Mini-nav interno: pestañas -->
-            <nav class="flex gap-2" aria-label="Secciones de la canción">
-              <button class="px-3 py-1 text-gray-700 bg-gray-100 rounded tab-btn" data-tab="lyrics">Letra</button>
-              <button class="px-3 py-1 text-gray-700 bg-gray-100 rounded tab-btn" data-tab="reflection">Reflexión</button>
-              <button class="px-3 py-1 text-gray-700 bg-gray-100 rounded tab-btn" data-tab="listen">Escuchar</button>
-            </nav>
-
-            <!-- Contenedores por tab -->
-            <div id="tab-lyrics" class="hidden mt-4 text-sm text-gray-700 whitespace-pre-wrap tab-content"></div>
-            <div id="tab-reflection" class="hidden mt-4 text-sm text-gray-700 tab-content"></div>
-            <div id="tab-listen" class="hidden mt-4 tab-content">
-              <div id="post-actions"></div>
-            </div>
-          </div>
-
-          <!-- Navegación simple: flechas Prev / Next -->
-          <div class="flex items-center justify-between mt-6">
-            <button id="prev-btn" class="px-4 py-2 text-gray-700 bg-gray-100 rounded hover:bg-gray-200">← Anterior</button>
-            <div class="text-sm text-gray-500" id="post-counter"></div>
-            <button id="next-btn" class="px-4 py-2 text-gray-700 bg-gray-100 rounded hover:bg-gray-200">Siguiente →</button>
-          </div>
-        </div>
-      </section>
-
-      <div class="mt-6">
-        <a href="./index.html" class="text-blue-600 hover:underline">← Volver al inicio</a>
-      </div>
-    </main>
-
-    <!-- Nuevo script específico para cancion.html -->
-    <script src="./src/js/cancion.js"></script>
-    <!-- Animated footer waves -->
-    <div class="footer-waves" aria-hidden="true">
-      <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
-        <g transform="translate(0,0)">
-          <path class="wave wave--back" d="M0,120 C150,200 350,40 600,120 C850,200 1050,40 1200,120 L1200,200 L0,200 Z" fill="rgba(59,130,246,0.12)" />
-          <path class="wave wave--mid" d="M0,140 C200,40 400,200 600,140 C800,80 1000,200 1200,140 L1200,200 L0,200 Z" fill="rgba(236,72,153,0.12)" />
-          <path class="wave wave--front" d="M0,160 C250,220 450,80 600,160 C750,240 950,80 1200,160 L1200,200 L0,200 Z" fill="rgba(234,179,8,0.14)" />
-        </g>
-      </svg>
+      <nav>
+        <ul class="flex gap-4 text-sm">
+          <li><a class="text-gray-600 hover:underline" href="./index.html">Inicio</a></li>
+          <li><a class="text-blue-600" aria-current="page" href="./cancion.html">Canciones</a></li>
+          <li><a class="text-gray-600 hover:underline" href="./acerca.html">Acerca</a></li>
+        </ul>
+      </nav>
     </div>
-  </body>
+  </header>
+
+  <main class="max-w-4xl p-6 mx-auto">
+
+    <section id="filters" class="mb-6">
+      <h2 class="mb-2 text-lg font-semibold">Filtrar canciones</h2>
+      <div class="flex flex-wrap gap-3">
+        <select id="filter-author" class="px-3 py-2 border rounded">
+          <option value="">Todos los autores</option>
+        </select>
+        <select id="filter-genre" class="px-3 py-2 border rounded">
+          <option value="">Todos los géneros</option>
+        </select>
+        <button id="clear-filters" class="px-4 py-2 text-sm text-white bg-blue-600 rounded hover:bg-blue-700">
+          Limpiar filtros
+        </button>
+      </div>
+    </section>
+    <!-- Visor único de canción -->
+    <section id="viewer" class="mt-6">
+      <div class="max-w-3xl p-6 mx-auto bg-white rounded-lg shadow">
+        <header class="flex items-start gap-4">
+          <div class="flex-1">
+            <h2 id="post-title" class="text-2xl font-bold">Cargando...</h2>
+            <p id="post-meta" class="mt-1 text-sm text-gray-500"></p>
+          </div>
+        </header>
+
+        <div class="mt-4">
+          <!-- Mini-nav interno: pestañas -->
+          <nav class="flex gap-2" aria-label="Secciones de la canción">
+            <button class="px-3 py-1 text-gray-700 bg-gray-100 rounded tab-btn" data-tab="author">Autor</button>
+            <button class="px-3 py-1 text-gray-700 bg-gray-100 rounded tab-btn" data-tab="reflection">Reflexión</button>
+            <button class="px-3 py-1 text-gray-700 bg-gray-100 rounded tab-btn" data-tab="listen">Escuchar</button>
+          </nav>
+
+          <!-- Contenedores por tab -->
+          <div id="tab-author" class="hidden mt-4 text-sm text-gray-700 tab-content"></div>
+          <div id="tab-reflection" class="hidden mt-4 text-sm text-gray-700 tab-content"></div>
+          <div id="tab-listen" class="hidden mt-4 tab-content">
+            <div id="post-actions"></div>
+          </div>
+        </div>
+
+        <!-- Navegación simple: flechas Prev / Next -->
+        <div class="flex items-center justify-between mt-6">
+          <button id="prev-btn" class="px-4 py-2 text-gray-700 bg-gray-100 rounded hover:bg-gray-200">←
+            Anterior</button>
+          <div class="text-sm text-gray-500" id="post-counter"></div>
+          <button id="next-btn" class="px-4 py-2 text-gray-700 bg-gray-100 rounded hover:bg-gray-200">Siguiente
+            →</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-6">
+      <a href="./index.html" class="text-blue-600 hover:underline">← Volver al inicio</a>
+    </div>
+  </main>
+
+  <!-- Nuevo script específico para cancion.html -->
+  <script src="./src/js/cancion.js"></script>
+  <!-- Animated footer waves -->
+  <div class="footer-waves" aria-hidden="true">
+    <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
+      <g transform="translate(0,0)">
+        <path class="wave wave--back" d="M0,120 C150,200 350,40 600,120 C850,200 1050,40 1200,120 L1200,200 L0,200 Z"
+          fill="rgba(59,130,246,0.12)" />
+        <path class="wave wave--mid" d="M0,140 C200,40 400,200 600,140 C800,80 1000,200 1200,140 L1200,200 L0,200 Z"
+          fill="rgba(236,72,153,0.12)" />
+        <path class="wave wave--front" d="M0,160 C250,220 450,80 600,160 C750,240 950,80 1200,160 L1200,200 L0,200 Z"
+          fill="rgba(234,179,8,0.14)" />
+      </g>
+    </svg>
+  </div>
+</body>
+
 </html>
