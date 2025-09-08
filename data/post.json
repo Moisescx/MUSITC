@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "title": "Nombre de la Canción 1",
+  "excerpt": "Pequeña reflexión o contexto sobre la canción. Un par de líneas para enganchar al lector.",
+  "slug": "cancion-1",
+  "content": "Verso 1:\nAquí una letra de ejemplo, con saltos de línea que se respetan.\n\nEstribillo:\nY canto al viento,\ncon la guitarra en la mano.\n\nVerso 2:\nOtra estrofa para el ejemplo.",
+  "reflection": "Esta canción nació de una tarde de lluvia. La letra habla de nostalgia y esperanza; puedes ampliar aquí la reflexión personal sobre el proceso creativo.",
+  "listenUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "listenText": "Escuchar en YouTube — versión oficial"
+  },
+  {
+    "id": "2",
+    "title": "Nombre de la Canción 2",
+    "excerpt": "Breve contexto o anécdota relacionada con la letra.",
+    "slug": "cancion-2"
+  ,"content": "Letra de la canción 2. Aquí va un ejemplo corto.\n\nEstribillo:\nLa melodía se eleva...",
+  "reflection": "Reflexión sobre la canción 2: cómo se conectó con una experiencia personal que inspiró la letra.",
+  "listenUrl": "https://open.spotify.com/track/example",
+  "listenText": "Escuchar en Spotify — 3:45"
+  },
+  {
+    "id": "3",
+    "title": "Nombre de la Canción 3",
+    "excerpt": "Contexto breve o frase que resuma la entrada.",
+    "slug": "cancion-3"
+  ,"content": "Letra de la canción 3. Un ejemplo para pruebas.\n\nPuente:\nPalabras que conectan estrofas.",
+  "reflection": "Una breve reflexión para la canción 3, destinada a probar el panel de reflexión.",
+  "listenUrl": "",
+  "listenText": "Escuchar — (no disponible)"
+  },
+  {
+    "id": "4",
+    "title": "Nombre de la Canción 3",
+    "excerpt": "Contexto breve o frase que resuma la entrada.",
+    "slug": "cancion-3"
+  ,"content": "Letra de la canción 4 — duplicada de ejemplo.",
+  "reflection": "Reflexión ejemplo para la canción 4.",
+  "listenUrl": "",
+  "listenText": "Escuchar — (no disponible)"
+  },
+    {
+    "id": "5",
+    "title": "Nombre de la Canción 3",
+    "excerpt": "Contexto breve o frase que resuma la entrada.",
+    "slug": "cancion-3"
+    ,"content": "Letra de la canción 5 — ejemplo final.",
+    "reflection": "Reflexión de ejemplo para la canción 5.",
+    "listenUrl": "https://soundcloud.com/example/track",
+    "listenText": "Escuchar en SoundCloud"
+    }
+]

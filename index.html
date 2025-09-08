@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog Musical - Inicio</title>
+    <!-- Enlazamos el CSS compilado por Tailwind (dist/output.css) -->
+  <link rel="stylesheet" href="./dist/output.css">
+  </head>
+  <body class="bg-music-gradient text-gray-800">
+    <!-- Header: logo y navegación principal -->
+    <header class="header-surface shadow-sm">
+      <div class="max-w-4xl panel-surface mx-auto flex items-center justify-between p-4">
+        <!-- Logo / nombre del blog -->
+        <div class="flex items-center gap-3">
+          <!-- Imagen de ejemplo en src/img -->
+          <img src="./src/img/cover.svg" alt="Logo" class="h-10 w-10" />
+          <h1 class="text-xl font-semibold">Blog Musical</h1>
+        </div>
+
+        <!-- Navegación simple -->
+        <nav>
+          <ul class="flex gap-4 text-sm">
+            <li><a class="text-blue-600" aria-current="page" href="./index.html">Inicio</a></li>
+            <li><a class="text-gray-600 hover:underline" href="./cancion.html">Canciones</a></li>
+            <li><a class="text-gray-600 hover:underline" href="./acerca.html">Acerca</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="max-w-4xl mx-auto p-6">
+      <!-- Introducción breve -->
+      <section class="mb-6">
+        <h2 class="text-2xl font-bold">Reflexiones sobre letras</h2>
+        <p class="text-gray-600 mt-2">Un espacio para compartir letras de canciones y pensamientos sobre ellas.</p>
+      </section>
+
+      <!-- Grid de posts: se renderizará dinámicamente desde data/post.json -->
+      <section aria-label="Listado de entradas" id="posts" class="grid gap-6 grid-cols-1 sm:grid-cols-2">
+        <!-- Mensaje de carga y fallback si JS está deshabilitado -->
+        <p id="posts-fallback" class="text-gray-500">Cargando entradas... (si no ves contenido, activa JavaScript o revisa la consola)</p>
+      </section>
+    </main>
+
+    <!-- Scripts: archivo JS principal (puede estar vacío por ahora) -->
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
