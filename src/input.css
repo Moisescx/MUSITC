@@ -49,8 +49,12 @@
 			}
 
 		/* Make sure panels sit above the waves */
-		.panel-surface, .header-surface { position: relative; z-index: 10; }
+		.panel-surface, .header-surface { position: relative; z-index: 30; }
+		/* Ensure main content and posts are above the animated waves */
+		main, #posts, .max-w-4xl, .max-w-3xl { position: relative; z-index: 20; }
 
 		/* Reserve space at bottom so content is not covered by waves */
 		main { padding-bottom: 220px; }
+		/* Keep waves behind everything */
+		.footer-waves { z-index: 0; }
 }
