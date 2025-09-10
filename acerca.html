@@ -1,54 +1,70 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Acerca - Blog Musical</title>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acerca - Blog Musical</title>
   <link rel="stylesheet" href="./dist/output.css">
-  </head>
-  <body class="text-gray-800 bg-music-gradient">
-    <header class="shadow-sm header-surface">
-      <div class="flex items-center justify-between max-w-4xl p-4 mx-auto panel-surface">
-        <div class="flex items-center gap-3">
-          <img src="./src/img/logo.svg" alt="Logo" class="w-10 h-10" />
-          <h1 class="text-xl font-semibold">MUSITC</h1>
-        </div>
-        <nav>
-          <ul class="flex gap-4 text-sm">
-            <li><a class="text-gray-600 hover:underline" href="./index.html">Inicio</a></li>
-            <li><a class="text-gray-600 hover:underline" href="./cancion.html">Canciones</a></li>
-            <li><a class="text-blue-600" aria-current="page" href="./acerca.html">Acerca</a></li>
-          </ul>
-        </nav>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rakkas&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="text-gray-800 bg-music-gradient">
+  <header class="shadow-sm header-surface">
+    <div class="flex items-center justify-between max-w-4xl p-4 mx-auto panel-surface">
+      <div class="flex items-center gap-3">
+        <img src="./src/img/logo.svg" alt="Logo" class="w-10 h-10" />
+        <h1 class="text-xl">MUSITC</h1>
       </div>
-    </header>
-
-    <main class="max-w-4xl p-6 mx-auto">
-      <article class="p-6 bg-white rounded-lg shadow">
-        <h2 class="text-2xl font-bold">Acerca de este blog</h2>
-        <p class="mt-4 text-gray-600">Este es un blog musical sencillo pensado para publicar letras de canciones y reflexiones personales sobre ellas. La idea es mantener un formato limpio y fácil de mantener: cada entrada contiene el título de la canción, un breve contexto y la letra completa en la página de detalle.</p>
-
-  <h3 class="mt-4 text-lg font-semibold">Sobre esta página</h3>
-  <p class="mt-2 text-gray-600">Este espacio nació como un lugar para compartir letras y pensamientos sobre música. Está hecho con cariño y sin pretensiones: una pequeña bitácora hecha con amor por un chileno que disfruta de las canciones y las historias que cuentan.</p>
-
-  <p class="mt-2 text-gray-600">Si te interesa colaborar o comentar alguna entrada, puedes hacerlo recogiendo ideas aquí y preguntándome cómo lo hacemos.</p>
-
-        <div class="mt-6">
-          <a href="./index.html" class="text-blue-600 hover:underline">← Volver al inicio</a>
-        </div>
-      </article>
-    </main>
-
-    <script src="./src/js/main.js"></script>
-    <!-- Animated footer waves -->
-    <div class="footer-waves" aria-hidden="true">
-      <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
-        <g transform="translate(0,0)">
-          <path class="wave wave--back" d="M0,120 C150,200 350,40 600,120 C850,200 1050,40 1200,120 L1200,200 L0,200 Z" fill="rgba(59,130,246,0.12)" />
-          <path class="wave wave--mid" d="M0,140 C200,40 400,200 600,140 C800,80 1000,200 1200,140 L1200,200 L0,200 Z" fill="rgba(236,72,153,0.12)" />
-          <path class="wave wave--front" d="M0,160 C250,220 450,80 600,160 C750,240 950,80 1200,160 L1200,200 L0,200 Z" fill="rgba(234,179,8,0.14)" />
-        </g>
-      </svg>
+      <nav>
+        <ul class="flex gap-4 text-sm">
+          <li><a class="text-gray-600 hover:underline" href="./index.html">Inicio</a></li>
+          <li><a class="text-gray-600 hover:underline" href="./cancion.html">Canciones</a></li>
+          <li><a class="text-blue-600" aria-current="page" href="./acerca.html">Acerca</a></li>
+        </ul>
+      </nav>
     </div>
-  </body>
+  </header>
+
+  <main class="max-w-4xl p-6 mx-auto">
+    <article class="p-6 bg-white rounded-lg shadow">
+      <h2 class="text-2xl font-bold">Acerca de este blog</h2>
+      <p class="mt-4 text-gray-600">Este es un blog musical sencillo pensado para publicar letras de canciones y
+        reflexiones personales sobre ellas. La idea es mantener un formato limpio y fácil de mantener: cada entrada
+        contiene el título de la canción, un breve contexto y la letra completa en la página de detalle.</p>
+
+      <h3 class="mt-4 text-lg font-semibold">Sobre esta página</h3>
+      <p class="mt-2 text-gray-600">Este espacio nació como un lugar para compartir letras y pensamientos sobre música.
+        Está hecho con cariño y sin pretensiones: una pequeña bitácora hecha con amor por un chileno que disfruta de las
+        canciones y las historias que cuentan.</p>
+
+      <p class="mt-2 text-gray-600">Si te interesa colaborar o comentar alguna entrada, puedes hacerlo recogiendo ideas
+        aquí y preguntándome cómo lo hacemos.</p>
+
+      <div class="mt-6">
+        <a href="./index.html" class="text-blue-600 hover:underline">← Volver al inicio</a>
+      </div>
+    </article>
+  </main>
+
+  <script src="./src/js/main.js"></script>
+  <!-- Animated footer waves -->
+  <div class="footer-waves" aria-hidden="true">
+    <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
+      <g transform="translate(0,0)">
+        <path class="wave wave--back" d="M0,120 C150,200 350,40 600,120 C850,200 1050,40 1200,120 L1200,200 L0,200 Z"
+          fill="rgba(59,130,246,0.12)" />
+        <path class="wave wave--mid" d="M0,140 C200,40 400,200 600,140 C800,80 1000,200 1200,140 L1200,200 L0,200 Z"
+          fill="rgba(236,72,153,0.12)" />
+        <path class="wave wave--front" d="M0,160 C250,220 450,80 600,160 C750,240 950,80 1200,160 L1200,200 L0,200 Z"
+          fill="rgba(234,179,8,0.14)" />
+      </g>
+    </svg>
+  </div>
+</body>
+
 </html>
