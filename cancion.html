@@ -26,21 +26,28 @@
   </header>
 
   <main class="max-w-4xl p-6 mx-auto">
-
     <section id="filters" class="mb-6">
       <h2 class="mb-2 text-lg font-semibold">Filtrar canciones</h2>
-      <div class="flex flex-wrap gap-3">
-        <select id="filter-author" class="px-3 py-2 border rounded">
-          <option value="">Todos los autores</option>
-        </select>
-        <select id="filter-genre" class="px-3 py-2 border rounded">
-          <option value="">Todos los géneros</option>
-        </select>
-        <button id="clear-filters" class="px-4 py-2 text-sm text-white bg-blue-600 rounded hover:bg-blue-700">
+
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <!-- Selectores -->
+        <div class="flex flex-wrap gap-3">
+          <select id="filter-author" class="px-3 py-2 border rounded">
+            <option value="">Todos los autores</option>
+          </select>
+          <select id="filter-genre" class="px-3 py-2 border rounded">
+            <option value="">Todos los géneros</option>
+          </select>
+        </div>
+
+        <!-- Botón -->
+        <button id="clear-filters"
+          class="self-start px-4 py-2 text-sm text-white bg-blue-600 rounded hover:bg-blue-700 sm:self-auto">
           Limpiar filtros
         </button>
       </div>
     </section>
+
     <!-- Visor único de canción -->
     <section id="viewer" class="mt-6">
       <div class="max-w-3xl p-6 mx-auto bg-white rounded-lg shadow">

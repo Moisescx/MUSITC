@@ -16,7 +16,7 @@
       <!-- Logo / nombre del blog -->
       <div class="flex items-center gap-3">
         <!-- Imagen de ejemplo en src/img -->
-    <img src="./src/img/logo.svg" alt="Logo" class="w-10 h-10" />
+        <img src="./src/img/logo.svg" alt="Logo" class="w-10 h-10" />
         <h1 class="text-xl font-semibold">MUSITC</h1>
       </div>
 
@@ -39,12 +39,26 @@
       <p class="mt-2 text-gray-600">Un espacio para compartir letras de canciones y pensamientos sobre ellas.</p>
     </section>
 
+
+
     <!-- Grid de posts: se renderizará dinámicamente desde data/post.json -->
     <section aria-label="Listado de entradas" id="posts" class="grid grid-cols-1 gap-6 sm:grid-cols-2">
       <!-- Mensaje de carga y fallback si JS está deshabilitado -->
       <p id="posts-fallback" class="text-gray-500">Cargando entradas... (si no ves contenido, activa JavaScript o revisa
         la consola)</p>
     </section>
+    <!-- Explorar por género -->
+    <section id="genres" class="mt-12 mb-12 text-center">
+      <h2 class="mb-6 text-lg font-semibold">Explorar por género</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="./cancion.html?genre=Rock" class="px-3 py-2 text-sm bg-gray-100 rounded hover:bg-gray-200">Rock</a>
+        <a href="./cancion.html?genre=Pop" class="px-3 py-2 text-sm bg-gray-100 rounded hover:bg-gray-200">Pop</a>
+        <a href="./cancion.html?genre=Indie" class="px-3 py-2 text-sm bg-gray-100 rounded hover:bg-gray-200">Indie</a>
+        <a href="./cancion.html?genre=Electrónica"
+          class="px-3 py-2 text-sm bg-gray-100 rounded hover:bg-gray-200">Electrónica</a>
+      </div>
+    </section>
+
   </main>
 
   <!-- Scripts: archivo JS principal (puede estar vacío por ahora) -->

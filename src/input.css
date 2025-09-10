@@ -4,57 +4,98 @@
 
 /* Custom site styles: gradient background and translucent panels */
 @layer utilities {
-	.bg-music-gradient {
-		background: linear-gradient(180deg, rgba(185, 225, 250, 0.18) 0%, rgba(255, 235, 205, 0.12) 45%, rgba(220, 185, 255, 0.12) 100%);
-		background-attachment: fixed;
-	}
+  .bg-music-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(185, 225, 250, 0.18) 0%,
+      rgba(255, 235, 205, 0.12) 45%,
+      rgba(220, 185, 255, 0.12) 100%
+    );
+    background-attachment: fixed;
+  }
 
-	.panel-surface {
-		background-color: rgba(255,255,255,0.82);
-		backdrop-filter: blur(6px);
-		-webkit-backdrop-filter: blur(6px);
-		border: 1px solid rgba(255,255,255,0.4);
-	}
+  .panel-surface {
+    background-color: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
 
-	.header-surface {
-		background-color: rgba(255,255,255,0.6);
-		backdrop-filter: blur(4px);
-		-webkit-backdrop-filter: blur(4px);
-		border-bottom: 1px solid rgba(0,0,0,0.06);
-	}
-		/* Waves at bottom to simulate music movement */
-		.footer-waves {
-			position: fixed;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: 100%;
-			height: 160px;
-			pointer-events: none;
-			z-index: 0;
-			overflow: hidden;
-		}
+  .header-surface {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  /* Waves at bottom to simulate music movement */
+  .footer-waves {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 160px;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
 
-			/* Make the svg wider than viewport to prevent gaps on large screens */
-			.footer-waves svg{ width:140%; height:100%; display:block; transform-origin: left bottom; }
-			.footer-waves .wave{ transform: translate3d(0,0,0); }
-			.footer-waves .wave--back{ opacity: 0.28; animation: wave 26s linear infinite; }
-			.footer-waves .wave--mid{ opacity: 0.45; animation: wave 16s linear infinite reverse; }
-			.footer-waves .wave--front{ opacity: 0.72; animation: wave 10s linear infinite; }
+  /* Make the svg wider than viewport to prevent gaps on large screens */
+  .footer-waves svg {
+    width: 140%;
+    height: 100%;
+    display: block;
+    transform-origin: left bottom;
+  }
+  .footer-waves .wave {
+    transform: translate3d(0, 0, 0);
+  }
+  .footer-waves .wave--back {
+    opacity: 0.28;
+    animation: wave 26s linear infinite;
+  }
+  .footer-waves .wave--mid {
+    opacity: 0.45;
+    animation: wave 16s linear infinite reverse;
+  }
+  .footer-waves .wave--front {
+    opacity: 0.72;
+    animation: wave 10s linear infinite;
+  }
 
-			@keyframes wave {
-				0% { transform: translateX(0); }
-				50% { transform: translateX(-30%); }
-				100% { transform: translateX(0); }
-			}
+  @keyframes wave {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-30%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
-		/* Make sure panels sit above the waves */
-		.panel-surface, .header-surface { position: relative; z-index: 30; }
-		/* Ensure main content and posts are above the animated waves */
-		main, #posts, .max-w-4xl, .max-w-3xl { position: relative; z-index: 20; }
+  /* Make sure panels sit above the waves */
+  .panel-surface,
+  .header-surface {
+    position: relative;
+    z-index: 30;
+  }
+  /* Ensure main content and posts are above the animated waves */
+  main,
+  #posts,
+  .max-w-4xl,
+  .max-w-3xl {
+    position: relative;
+    z-index: 20;
+  }
 
-		/* Reserve space at bottom so content is not covered by waves */
-		main { padding-bottom: 220px; }
-		/* Keep waves behind everything */
-		.footer-waves { z-index: 0; }
+  /* Reserve space at bottom so content is not covered by waves */
+  main {
+    padding-bottom: 220px;
+  }
+  /* Keep waves behind everything */
+  .footer-waves {
+    z-index: 0;
+  }
 }
