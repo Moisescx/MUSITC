@@ -14,18 +14,50 @@
 </head>
 
 <body class="text-gray-800 bg-music-gradient">
-  <header class="shadow-sm header-surface">
-    <div class="flex items-center justify-between max-w-4xl p-4 mx-auto panel-surface">
-      <div class="flex items-center gap-3">
-        <img src="./src/img/logo.svg" alt="Logo" class="w-10 h-10" />
-        <h1 class="text-xl">MUSITC</h1>
+  <header class="relative overflow-hidden shadow-sm header-surface">
+    <!-- Barras laterales izquierda - EXTRA GRANDES -->
+    <div class="absolute top-0 left-0 flex flex-col justify-center w-20 h-full gap-1 opacity-35" aria-hidden="true">
+      <div class="w-full bg-blue-500 rounded-r-lg animate-pulse" style="height: 25%; animation-duration: 0.8s;"></div>
+      <div class="w-full bg-purple-500 rounded-r-lg animate-pulse"
+        style="height: 40%; animation-duration: 1.2s; animation-delay: 0.2s;"></div>
+      <div class="w-full bg-pink-500 rounded-r-lg animate-pulse"
+        style="height: 60%; animation-duration: 0.9s; animation-delay: 0.4s;"></div>
+      <div class="w-full bg-blue-400 rounded-r-lg animate-pulse"
+        style="height: 35%; animation-duration: 1.1s; animation-delay: 0.6s;"></div>
+      <div class="w-full bg-purple-400 rounded-r-lg animate-pulse"
+        style="height: 30%; animation-duration: 1.0s; animation-delay: 0.8s;"></div>
+      <div class="w-full bg-pink-400 rounded-r-lg animate-pulse"
+        style="height: 50%; animation-duration: 0.7s; animation-delay: 1s;"></div>
+    </div>
+
+    <!-- Barras laterales derecha - EXTRA GRANDES -->
+    <div class="absolute top-0 right-0 flex flex-col justify-center w-20 h-full gap-1 opacity-35" aria-hidden="true">
+      <div class="w-full bg-pink-500 rounded-l-lg animate-pulse" style="height: 55%; animation-duration: 1.0s;"></div>
+      <div class="w-full bg-blue-500 rounded-l-lg animate-pulse"
+        style="height: 30%; animation-duration: 0.7s; animation-delay: 0.3s;"></div>
+      <div class="w-full bg-purple-500 rounded-l-lg animate-pulse"
+        style="height: 65%; animation-duration: 1.3s; animation-delay: 0.5s;"></div>
+      <div class="w-full bg-pink-400 rounded-l-lg animate-pulse"
+        style="height: 25%; animation-duration: 0.9s; animation-delay: 0.7s;"></div>
+      <div class="w-full bg-blue-400 rounded-l-lg animate-pulse"
+        style="height: 45%; animation-duration: 1.1s; animation-delay: 0.9s;"></div>
+      <div class="w-full bg-purple-400 rounded-l-lg animate-pulse"
+        style="height: 40%; animation-duration: 0.8s; animation-delay: 1.1s;"></div>
+    </div>
+
+    <div class="relative z-10 flex items-center justify-between max-w-4xl p-4 mx-auto panel-surface">
+      <!-- Logo / nombre del blog -->
+      <div class="flex items-center flex-shrink-0 gap-3">
+        <div class="w-2 h-8 rounded-full sm:h-10 bg-gradient-to-b from-blue-500 to-purple-600"></div>
+        <h1 class="text-xl font-bold text-gray-800 sm:text-2xl">MUSITC</h1>
       </div>
-      <nav>
-        <ul class="flex gap-4 text-sm">
-          <li><a class="text-gray-600 hover:underline" href="./index.html">Inicio</a></li>
-          <li><a class="text-gray-600 hover:underline" href="./cancion.html">Canciones</a></li>
-          <li><a class="text-blue-600" aria-current="page" href="./acerca.html">Acerca</a></li>
-          <li><a class="text-gray-600 hover:underline" href="./contacto.html">Comunidad</a></li>
+      <!-- Navegación simple -->
+      <nav class="flex-shrink-0">
+        <ul class="flex gap-2 text-xs sm:gap-4 sm:text-sm">
+          <li><a class="px-1 text-gray-600 hover:underline" href="./index.html">Inicio</a></li>
+          <li><a class="px-1 text-gray-600 hover:underline" href="./cancion.html">Canciones</a></li>
+          <li><a class="px-1 text-blue-600" aria-current="page" href="./acerca.html">Acerca</a></li>
+          <li><a class="px-1 text-gray-600 hover:underline" href="./contacto.html">Comunidad</a></li>
         </ul>
       </nav>
     </div>

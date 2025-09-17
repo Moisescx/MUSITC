@@ -15,10 +15,12 @@ h6 {
 }
 
 p,
+a,
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
+
 
 /* Personalizar dropdowns */
 select {
