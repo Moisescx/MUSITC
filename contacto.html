@@ -85,21 +85,24 @@
         </section>
 
         <!-- Estadísticas de la comunidad -->
+        <!-- Estadísticas con data-stat -->
         <section class="mb-8">
             <div class="grid max-w-lg grid-cols-1 gap-4 mx-auto sm:grid-cols-2">
                 <div
                     class="p-4 text-center transition-all bg-white border-2 border-blue-100 shadow-md rounded-xl hover:border-blue-300">
-                    <h3 class="mb-1 text-2xl font-bold text-blue-600">47</h3>
+                    <h3 class="mb-1 text-2xl font-bold text-blue-600" data-stat="reflexiones">47</h3>
                     <p class="text-sm text-gray-600">Reflexiones compartidas</p>
                 </div>
                 <div
                     class="p-4 text-center transition-all bg-white border-2 border-green-100 shadow-md rounded-xl hover:border-green-300">
-                    <h3 class="mb-1 text-2xl font-bold text-green-600">23</h3>
+                    <h3 class="mb-1 text-2xl font-bold text-green-600" data-stat="sugerencias">23</h3>
                     <p class="text-sm text-gray-600">Sugerencias recibidas</p>
                 </div>
             </div>
-        </section>
 
+            <!-- Opcional: mostrar fecha de actualización -->
+            <p class="mt-2 text-xs text-center text-gray-400" data-stat="lastUpdated"></p>
+        </section>
         <!-- Layout principal con sidebar -->
         <div class="grid grid-cols-1 gap-8 xl:grid-cols-4">
 
