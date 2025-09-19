@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blog Musical - Comentarios y Sugerencias</title>
-    <!-- Enlazamos el CSS compilado por Tailwind (dist/output.css) -->
+    <title>Comunidad — MUSITC</title>
     <link rel="stylesheet" href="./dist/output.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,9 +14,9 @@
 </head>
 
 <body class="text-gray-800 bg-music-gradient">
-    <!-- Header: logo y navegación principal -->
+    <!-- Header -->
     <header class="relative overflow-hidden shadow-sm header-surface">
-        <!-- Barras laterales izquierda - EXTRA GRANDES -->
+        <!-- Side bars (md+) -->
         <div class="absolute top-0 left-0 flex flex-col justify-center w-20 h-full gap-1 opacity-35" aria-hidden="true">
             <div class="w-full bg-blue-500 rounded-r-lg animate-pulse" style="height: 25%; animation-duration: 0.8s;">
             </div>
@@ -51,15 +50,13 @@
         </div>
 
         <div class="relative z-10 flex items-center justify-between max-w-4xl p-4 mx-auto panel-surface">
-            <!-- Logo / nombre del blog -->
-            <div class="flex items-center flex-shrink-0 gap-3">
-                <div class="w-2 h-8 rounded-full sm:h-10 bg-gradient-to-b from-blue-500 to-purple-600"></div>
-                <h1 class="text-xl font-bold text-gray-800 sm:text-2xl">MUSITC</h1>
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-8 rounded-full sm:h-10 bg-gradient-to-b from-blue-500 to-purple-500"></div>
+                <h1 class="text-xl font-bold text-gray-900 sm:text-2xl">MUSITC</h1>
             </div>
 
-            <!-- Navegación simple -->
-            <nav class="flex-shrink-0">
-                <ul class="flex gap-2 text-xs sm:gap-4 sm:text-sm">
+            <nav class="">
+                <ul class="flex gap-3 text-xs sm:gap-4 sm:text-sm">
                     <li><a class="px-1 text-gray-600 hover:underline" href="./index.html">Inicio</a></li>
                     <li><a class="px-1 text-gray-600 hover:underline" href="./cancion.html">Canciones</a></li>
                     <li><a class="px-1 text-gray-600 hover:underline" href="./acerca.html">Acerca</a></li>
@@ -69,141 +66,145 @@
         </div>
     </header>
 
-    <!-- Contenedor principal -->
-    <main class="max-w-4xl p-6 mx-auto">
+    <!-- Main -->
+    <main class="max-w-4xl p-6 mx-auto space-y-10">
 
-        <!-- Introducción con fondo -->
-        <section class="px-6 py-8 mb-8 -mx-6 border-l-4 border-blue-500 bg-gradient-to-r from-blue-50 to-purple-50">
+        <!-- Intro -->
+        <section
+            class="px-6 py-8 -mx-6 border-l-4 border-blue-200 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
             <div class="text-center">
-                <h2 class="mb-4 text-3xl font-bold text-gray-800">Comunidad Musical</h2>
-                <p class="max-w-2xl mx-auto text-lg text-gray-700">
-                    Comparte tus reflexiones, sugiere canciones para analizar o simplemente cuéntanos qué música te
-                    emociona.
-                    Tu voz es importante en esta comunidad de amantes de la música.
+                <h2 class="mb-3 text-2xl font-semibold text-gray-900">Comunidad Musical</h2>
+                <p class="max-w-2xl mx-auto text-gray-700">
+                    Comparte tu reflexión, sugiere canciones o comenta lo que te moviliza. Este espacio está pensado
+                    para que la
+                    música nos conecte.
                 </p>
             </div>
         </section>
 
-        <!-- Estadísticas de la comunidad -->
-        <!-- Estadísticas con data-stat -->
-        <section class="mb-8">
+        <!-- Stats -->
+        <section aria-hidden="false" class="mb-2">
             <div class="grid max-w-lg grid-cols-1 gap-4 mx-auto sm:grid-cols-2">
-                <div
-                    class="p-4 text-center transition-all bg-white border-2 border-blue-100 shadow-md rounded-xl hover:border-blue-300">
-                    <h3 class="mb-1 text-2xl font-bold text-blue-600" data-stat="reflexiones">47</h3>
+                <div class="p-4 text-center bg-white border shadow-sm border-blue-50 rounded-xl">
+                    <h3 class="mb-1 text-2xl font-bold text-blue-600" data-stat="reflexiones">0</h3>
                     <p class="text-sm text-gray-600">Reflexiones compartidas</p>
                 </div>
-                <div
-                    class="p-4 text-center transition-all bg-white border-2 border-green-100 shadow-md rounded-xl hover:border-green-300">
-                    <h3 class="mb-1 text-2xl font-bold text-green-600" data-stat="sugerencias">23</h3>
+                <div class="p-4 text-center bg-white border shadow-sm border-green-50 rounded-xl">
+                    <h3 class="mb-1 text-2xl font-bold text-green-600" data-stat="sugerencias">1</h3>
                     <p class="text-sm text-gray-600">Sugerencias recibidas</p>
                 </div>
             </div>
-
-            <!-- Opcional: mostrar fecha de actualización -->
-            <p class="mt-2 text-xs text-center text-gray-400" data-stat="lastUpdated"></p>
+            <p class="mt-3 text-xs text-center text-gray-400" data-stat="lastUpdated"></p>
         </section>
-        <!-- Layout principal con sidebar -->
-        <div class="grid grid-cols-1 gap-8 xl:grid-cols-4">
 
-            <!-- Formularios principales -->
+        <!-- Layout -->
+        <div class="grid grid-cols-1 gap-8 xl:grid-cols-4">
+            <!-- Forms (main column) -->
             <div class="space-y-8 xl:col-span-3">
 
-                <!-- Formulario de reflexiones -->
-                <section class="overflow-hidden bg-white border-2 border-blue-100 shadow-lg rounded-xl">
-                    <div class="p-6 text-white bg-gradient-to-r from-blue-600 to-blue-700">
-                        <h3 class="mb-2 text-2xl font-semibold">💭 Comparte una Reflexión</h3>
-                        <p class="text-blue-100">¿Hay una canción que te ha marcado? Cuéntanos por qué</p>
+                <!-- Reflexión form -->
+                <section class="overflow-hidden bg-white border shadow border-blue-50 rounded-xl">
+                    <div class="p-6 text-white bg-gradient-to-r from-blue-500 to-blue-600 rounded-t-xl">
+                        <h3 class="mb-1 text-2xl font-semibold">💭 Comparte una Reflexión</h3>
+                        <p class="text-sm text-blue-100">¿Hay una canción que te marcó? Cuéntanos por qué.</p>
                     </div>
 
                     <div class="p-6">
-                        <form action="https://formspree.io/f/xyzdqeap" method="POST" class="space-y-4">
+                        <form role="form" aria-label="Formulario de reflexión" action="https://formspree.io/f/xyzdqeap"
+                            method="POST" class="space-y-4">
                             <input type="hidden" name="_subject" value="Nueva reflexión musical">
-                            <input type="hidden" name="_next" value="./comentarios.html?sent=reflexion">
+                            <input type="hidden" name="_next" value="./contacto.html?sent=reflexion">
                             <input type="hidden" name="tipo" value="reflexion">
 
                             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                 <div>
                                     <label for="nombre-reflexion"
                                         class="block mb-2 text-sm font-medium text-gray-700">Tu nombre</label>
-                                    <input type="text" id="nombre-reflexion" name="nombre" required
-                                        class="w-full px-4 py-3 transition-all border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <input aria-label="Tu nombre" autocomplete="name" type="text" id="nombre-reflexion"
+                                        name="nombre" required
+                                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300">
                                 </div>
 
                                 <div>
                                     <label for="email-reflexion" class="block mb-2 text-sm font-medium text-gray-700">Tu
                                         email</label>
-                                    <input type="email" id="email-reflexion" name="email" required
-                                        class="w-full px-4 py-3 transition-all border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <input aria-label="Tu email" autocomplete="email" type="email" id="email-reflexion"
+                                        name="email" required
+                                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300">
                                 </div>
                             </div>
 
                             <div>
                                 <label for="cancion" class="block mb-2 text-sm font-medium text-gray-700">Canción y
                                     artista</label>
-                                <input type="text" id="cancion" name="cancion"
+                                <input aria-label="Canción y artista" type="text" id="cancion" name="cancion"
                                     placeholder="Ej: Bohemian Rhapsody - Queen" required
-                                    class="w-full px-4 py-3 transition-all border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300">
                             </div>
 
                             <div>
                                 <label for="reflexion" class="block mb-2 text-sm font-medium text-gray-700">Tu
                                     reflexión</label>
-                                <textarea id="reflexion" name="reflexion" rows="4" required
-                                    placeholder="¿Qué te transmite esta canción? ¿Qué recuerdos te trae? ¿Por qué es especial para ti?"
-                                    class="w-full px-4 py-3 transition-all border-2 border-gray-200 resize-y rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                                <textarea aria-label="Tu reflexión" id="reflexion" name="reflexion" rows="5" required
+                                    placeholder="¿Qué te transmite esta canción? ¿Qué recuerdos te trae?"
+                                    class="w-full px-4 py-3 border border-gray-200 resize-y rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
                             </div>
 
-                            <button type="submit"
-                                class="w-full px-6 py-4 font-medium text-white transition-all shadow-lg bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                                🚀 Compartir Reflexión
-                            </button>
+                            <div class="flex justify-center sm:justify-start">
+                                <button type="submit"
+                                    class="w-full px-6 py-3 font-medium text-white shadow sm:w-auto rounded-xl bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600">
+                                    🚀 Compartir Reflexión
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </section>
 
-                <!-- Formulario de sugerencias -->
-                <section class="overflow-hidden bg-white border-2 border-green-100 shadow-lg rounded-xl">
-                    <div class="p-6 text-white bg-gradient-to-r from-green-600 to-green-700">
-                        <h3 class="mb-2 text-2xl font-semibold">🎵 Sugiere una Canción</h3>
-                        <p class="text-green-100">¿Hay una canción que deberíamos analizar en el blog?</p>
+                <!-- Sugerencia form -->
+                <section class="overflow-hidden bg-white border shadow border-green-50 rounded-xl">
+                    <div class="p-6 text-white bg-gradient-to-r from-green-500 to-green-600 rounded-t-xl">
+                        <h3 class="mb-1 text-2xl font-semibold">🎵 Sugiere una Canción</h3>
+                        <p class="text-sm text-green-100">Sugiere canciones para analizar en el blog.</p>
                     </div>
 
                     <div class="p-6">
-                        <form action="https://formspree.io/f/xnnbkpee" method="POST" class="space-y-4">
+                        <form role="form" aria-label="Formulario de sugerencia" action="https://formspree.io/f/xnnbkpee"
+                            method="POST" class="space-y-4">
                             <input type="hidden" name="_subject" value="Nueva sugerencia de canción">
-                            <input type="hidden" name="_next" value="./comentarios.html?sent=sugerencia">
+                            <input type="hidden" name="_next" value="./contacto.html?sent=sugerencia">
                             <input type="hidden" name="tipo" value="sugerencia">
 
                             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                 <div>
                                     <label for="nombre-sugerencia"
                                         class="block mb-2 text-sm font-medium text-gray-700">Tu nombre</label>
-                                    <input type="text" id="nombre-sugerencia" name="nombre" required
-                                        class="w-full px-4 py-3 transition-all border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                                    <input aria-label="Tu nombre" type="text" id="nombre-sugerencia" name="nombre"
+                                        required
+                                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-300">
                                 </div>
 
                                 <div>
                                     <label for="email-sugerencia"
                                         class="block mb-2 text-sm font-medium text-gray-700">Tu email</label>
-                                    <input type="email" id="email-sugerencia" name="email" required
-                                        class="w-full px-4 py-3 transition-all border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                                    <input aria-label="Tu email" type="email" id="email-sugerencia" name="email"
+                                        required
+                                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-300">
                                 </div>
                             </div>
 
                             <div>
                                 <label for="cancion-sugerida"
                                     class="block mb-2 text-sm font-medium text-gray-700">Canción sugerida</label>
-                                <input type="text" id="cancion-sugerida" name="cancion_sugerida"
-                                    placeholder="Ej: Imagine - John Lennon" required
-                                    class="w-full px-4 py-3 transition-all border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                                <input aria-label="Canción sugerida" type="text" id="cancion-sugerida"
+                                    name="cancion_sugerida" placeholder="Ej: Imagine - John Lennon" required
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-300">
                             </div>
 
                             <div>
                                 <label for="genero" class="block mb-2 text-sm font-medium text-gray-700">Género
                                     musical</label>
-                                <select id="genero" name="genero" required
-                                    class="w-full px-4 py-3 transition-all border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                                <select aria-label="Género musical" id="genero" name="genero" required
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-300">
                                     <option value="">Selecciona un género</option>
                                     <option value="Rock">Rock</option>
                                     <option value="Pop">Pop</option>
@@ -219,132 +220,134 @@
                             <div>
                                 <label for="razon" class="block mb-2 text-sm font-medium text-gray-700">¿Por qué
                                     sugieres esta canción?</label>
-                                <textarea id="razon" name="razon" rows="3" required
+                                <textarea aria-label="Razón de la sugerencia" id="razon" name="razon" rows="4" required
                                     placeholder="Cuéntanos por qué crees que esta canción merece un análisis..."
-                                    class="w-full px-4 py-3 transition-all border-2 border-gray-200 resize-y rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
+                                    class="w-full px-4 py-3 border border-gray-200 resize-y rounded-xl focus:outline-none focus:ring-2 focus:ring-green-300"></textarea>
                             </div>
 
-                            <button type="submit"
-                                class="w-full px-6 py-4 font-medium text-white transition-all shadow-lg bg-gradient-to-r from-green-600 to-green-700 rounded-xl hover:from-green-700 hover:to-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
-                                📩 Enviar Sugerencia
-                            </button>
+                            <div class="flex justify-center sm:justify-start">
+                                <button type="submit"
+                                    class="w-full px-6 py-3 font-medium text-white shadow sm:w-auto rounded-xl bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600">
+                                    📩 Enviar Sugerencia
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </section>
             </div>
 
             <!-- Sidebar -->
-            <div class="space-y-6 xl:col-span-1">
-
-                <!-- Tips de participación -->
-                <section class="p-6 bg-white border-2 border-yellow-100 shadow-md rounded-xl">
+            <aside class="space-y-6 xl:col-span-1">
+                <section class="p-6 bg-white border border-gray-100 shadow-sm rounded-xl">
                     <h4 class="flex items-center mb-4 text-lg font-semibold text-gray-800">
                         <span class="mr-2 text-yellow-500">💡</span>
                         Tips para una buena reflexión
                     </h4>
-                    <div class="space-y-3 text-sm text-gray-600">
-                        <div class="flex items-start gap-2">
-                            <span class="font-bold text-blue-500">•</span>
-                            <p>Sé específico sobre lo que te gusta de la canción</p>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="font-bold text-green-500">•</span>
-                            <p>Comparte experiencias personales</p>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="font-bold text-purple-500">•</span>
-                            <p>Menciona el contexto de la canción si lo conoces</p>
-                        </div>
-                    </div>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li class="flex items-start gap-2"><strong class="text-blue-500">•</strong> Sé específico sobre
+                            lo que te
+                            gusta.</li>
+                        <li class="flex items-start gap-2"><strong class="text-blue-500">•</strong> Comparte una
+                            experiencia personal.</li>
+                        <li class="flex items-start gap-2"><strong class="text-blue-500">•</strong> Menciona contexto y
+                            emociones.</li>
+                    </ul>
                 </section>
 
-                <!-- Géneros populares -->
-                <section class="p-6 bg-white border-2 border-purple-100 shadow-md rounded-xl">
+                <section class="p-6 bg-white border border-gray-100 shadow-sm rounded-xl">
                     <h4 class="mb-4 text-lg font-semibold text-gray-800">🎼 Géneros populares</h4>
                     <div class="flex flex-wrap gap-2">
                         <span
-                            class="px-3 py-1 text-sm text-blue-700 bg-blue-100 border border-blue-200 rounded-full">Rock</span>
+                            class="px-3 py-1 text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-full">Rock</span>
                         <span
-                            class="px-3 py-1 text-sm text-green-700 bg-green-100 border border-green-200 rounded-full">Pop</span>
+                            class="px-3 py-1 text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-full">Pop</span>
                         <span
-                            class="px-3 py-1 text-sm text-purple-700 bg-purple-100 border border-purple-200 rounded-full">Indie</span>
+                            class="px-3 py-1 text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-full">Indie</span>
                         <span
-                            class="px-3 py-1 text-sm text-yellow-700 bg-yellow-100 border border-yellow-200 rounded-full">Folk</span>
+                            class="px-3 py-1 text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-full">Folk</span>
                     </div>
                 </section>
-            </div>
+            </aside>
         </div>
 
-        <!-- Mensaje de éxito -->
-        <div id="success-message" class="hidden p-6 mt-8 bg-green-100 border border-green-300 rounded-lg">
-            <div class="flex items-center">
-                <span class="mr-3 text-2xl">✅</span>
+        <!-- Success message -->
+        <div id="success-message" class="hidden p-6 mt-4 border border-green-200 bg-green-50 rounded-xl" role="status"
+            aria-live="polite">
+            <div class="flex items-start gap-4">
+                <div class="text-2xl">✅</div>
                 <div>
-                    <h4 class="text-lg font-semibold text-green-800">¡Mensaje enviado con éxito!</h4>
-                    <p class="text-green-700" id="success-text">Gracias por tu participación en nuestra comunidad
-                        musical.</p>
+                    <h4 class="text-lg font-semibold text-green-800" id="success-title">¡Mensaje enviado!</h4>
+                    <p class="text-green-700" id="success-text">Gracias por tu participación — revisaremos tu aporte.
+                    </p>
                 </div>
             </div>
         </div>
 
-        <!-- Mensaje de bienvenida final -->
+        <!-- Footer CTA -->
         <section
-            class="p-6 mt-8 text-center border-l-4 border-blue-500 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
-            <h3 class="mb-2 text-xl font-semibold text-gray-800">¡Gracias por ser parte de nuestra comunidad!</h3>
-            <p class="text-gray-600">
-                Cada reflexión y sugerencia nos ayuda a crear contenido más significativo y conectar con la música de
-                una manera más profunda.
-            </p>
+            class="p-6 text-center border-l-4 border-blue-200 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
+            <h3 class="mb-2 text-xl font-semibold text-gray-900">Gracias por ser parte</h3>
+            <p class="text-gray-700">Cada reflexión y sugerencia hace que este lugar mejore. ¡Gracias por compartir
+                música!</p>
         </section>
 
-        <!-- Volver al inicio -->
-        <div class="mt-8 text-center">
+        <div class="text-center">
             <a href="./index.html" class="text-blue-600 hover:underline">← Volver al inicio</a>
         </div>
-
     </main>
 
-    <!-- Scripts -->
+    <!-- Script: muestra mensaje de éxito si ?sent=... está presente y actualiza fecha de stats -->
     <script>
-        // Mostrar mensaje de éxito basado en URL params
         document.addEventListener('DOMContentLoaded', function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const sent = urlParams.get('sent');
-
+            // Mostrar mensaje de éxito basado en URL params
+            const params = new URLSearchParams(window.location.search);
+            const sent = params.get('sent');
             if (sent) {
-                const successMessage = document.getElementById('success-message');
+                const success = document.getElementById('success-message');
                 const successText = document.getElementById('success-text');
+                const successTitle = document.getElementById('success-title');
 
                 if (sent === 'reflexion') {
-                    successText.textContent = 'Tu reflexión ha sido recibida. La revisaremos y podría aparecer en futuras publicaciones.';
+                    successTitle.textContent = '¡Reflexión recibida!';
+                    successText.textContent = 'Tu reflexión fue enviada. La revisaremos y puede aparecer en el sitio.';
                 } else if (sent === 'sugerencia') {
-                    successText.textContent = 'Tu sugerencia de canción ha sido recibida. ¡Gracias por ayudarnos a crecer!';
+                    successTitle.textContent = '¡Sugerencia recibida!';
+                    successText.textContent = 'Gracias por la sugerencia — la tomaremos en cuenta.';
+                } else {
+                    successTitle.textContent = '¡Mensaje enviado!';
+                    successText.textContent = 'Gracias por tu aporte.';
                 }
 
-                successMessage.classList.remove('hidden');
-                successMessage.scrollIntoView({ behavior: 'smooth' });
+                success.classList.remove('hidden');
+                success.scrollIntoView({ behavior: 'smooth' });
 
-                // Limpiar URL después de 3 segundos
-                setTimeout(() => {
-                    window.history.replaceState({}, document.title, window.location.pathname);
-                }, 3000);
+                // limpiar query string sin recargar
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+
+            // Actualizar fecha "lastUpdated" si existe
+            const last = document.querySelector('[data-stat="lastUpdated"]');
+            if (last) {
+                const now = new Date();
+                const opts = { year: 'numeric', month: 'short', day: 'numeric' };
+                last.textContent = `Última actualización: ${now.toLocaleDateString('es-CL', opts)}`;
             }
         });
     </script>
 
-    <!-- Animated footer waves -->
+    <!-- Footer waves -->
     <div class="footer-waves" aria-hidden="true">
         <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
             <g transform="translate(0,0)">
                 <path class="wave wave--back"
                     d="M0,120 C150,200 350,40 600,120 C850,200 1050,40 1200,120 L1200,200 L0,200 Z"
-                    fill="rgba(59,130,246,0.12)" />
+                    fill="rgba(59,130,246,0.08)" />
                 <path class="wave wave--mid"
                     d="M0,140 C200,40 400,200 600,140 C800,80 1000,200 1200,140 L1200,200 L0,200 Z"
-                    fill="rgba(236,72,153,0.12)" />
+                    fill="rgba(236,72,153,0.06)" />
                 <path class="wave wave--front"
                     d="M0,160 C250,220 450,80 600,160 C750,240 950,80 1200,160 L1200,200 L0,200 Z"
-                    fill="rgba(234,179,8,0.14)" />
+                    fill="rgba(234,179,8,0.05)" />
             </g>
         </svg>
     </div>

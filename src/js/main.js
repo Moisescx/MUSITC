@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("main.js cargado");
 
   // Función para cargar estadísticas
-  async function loadStats() {
+  /*async function loadStats() {
     try {
       const response = await fetch("./data/stats.json");
       if (!response.ok)
@@ -29,21 +29,23 @@ document.addEventListener("DOMContentLoaded", function () {
       // Las estadísticas quedan como están en el HTML
     }
   }
-
-  // Función para crear el HTML de una card a partir de un post
+*/
   function createCardHTML(post) {
     return `
-      <article class="bg-white rounded-lg shadow p-4">
-        <h3 class="text-lg font-semibold">${post.title}</h3>
-        <p class="text-sm text-gray-600 mt-2">${post.excerpt}</p>
-        <div class="mt-4">
-          <a href="./cancion.html#${post.slug}"
-              class="inline-block bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
-             Ver más
-          </a>
-        </div>
-      </article>
-    `;
+    <article class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 w-full max-w-sm">
+      <h3 class="text-xl font-semibold mb-3 text-gray-800 line-clamp-2">${post.title}</h3>
+      <p class="text-gray-600 mb-4 line-clamp-3">${post.excerpt}</p>
+      <div class="mt-auto">
+        <a href="./cancion.html#${post.slug}"
+            class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-medium">
+           Ver reflexión
+           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+           </svg>
+        </a>
+      </div>
+    </article>
+  `;
   }
 
   // Renderizar posts desde data/post.json

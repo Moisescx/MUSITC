@@ -15,7 +15,7 @@
 
 <body class="text-gray-800 bg-music-gradient">
   <header class="relative overflow-hidden shadow-sm header-surface">
-    <!-- Barras laterales izquierda - EXTRA GRANDES -->
+    <!-- Barras laterales izquierda -->
     <div class="absolute top-0 left-0 flex flex-col justify-center w-20 h-full gap-1 opacity-35" aria-hidden="true">
       <div class="w-full bg-blue-500 rounded-r-lg animate-pulse" style="height: 25%; animation-duration: 0.8s;"></div>
       <div class="w-full bg-purple-500 rounded-r-lg animate-pulse"
@@ -30,7 +30,7 @@
         style="height: 50%; animation-duration: 0.7s; animation-delay: 1s;"></div>
     </div>
 
-    <!-- Barras laterales derecha - EXTRA GRANDES -->
+    <!-- Barras laterales derecha -->
     <div class="absolute top-0 right-0 flex flex-col justify-center w-20 h-full gap-1 opacity-35" aria-hidden="true">
       <div class="w-full bg-pink-500 rounded-l-lg animate-pulse" style="height: 55%; animation-duration: 1.0s;"></div>
       <div class="w-full bg-blue-500 rounded-l-lg animate-pulse"
@@ -52,7 +52,7 @@
         <h1 class="text-xl font-bold text-gray-800 sm:text-2xl">MUSITC</h1>
       </div>
 
-      <!-- Navegación simple -->
+      <!-- Navegación -->
       <nav class="flex-shrink-0">
         <ul class="flex gap-2 text-xs sm:gap-4 sm:text-sm">
           <li><a class="px-1 text-gray-600 hover:underline" href="./index.html">Inicio</a></li>
@@ -64,15 +64,16 @@
     </div>
   </header>
 
-  <!-- Añadir estados de error -->
+  <!-- Error -->
   <div id="error-message" class="hidden p-4 mb-4 text-red-700 bg-red-100 border border-red-300 rounded-lg">
     <p>Error al cargar las canciones. Por favor, recarga la página.</p>
   </div>
 
   <main class="max-w-4xl p-6 mx-auto">
-    <section id="filters" class="mb-6">
-      <h2 class="mb-2 text-lg font-semibold">Filtrar canciones</h2>
-      <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+    <!-- Filtros -->
+    <section id="filters" class="mb-8">
+      <h2 class="mb-4 text-lg font-semibold text-center">Filtrar canciones</h2>
+      <div class="flex flex-wrap justify-center gap-3">
         <select id="filter-author" aria-label="Filtrar por autor"
           class="px-4 py-2 pr-10 text-sm text-gray-700 bg-gray-100 border-0 rounded hover:bg-gray-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
           <option value="">Todos los autores</option>
@@ -88,11 +89,9 @@
       </div>
     </section>
 
-
-    <!-- Visor único de canción -->
+    <!-- Visor canción -->
     <section id="viewer" class="mt-6">
       <div class="max-w-3xl p-6 mx-auto bg-white rounded-lg shadow">
-        <!-- Reemplazar "Cargando..." por skeleton -->
         <header class="flex items-start gap-4">
           <div class="flex-1">
             <div id="post-title" class="text-2xl font-bold">
@@ -105,8 +104,7 @@
         </header>
 
         <div class="mt-4">
-          <!-- Mini-nav interno: pestañas -->
-          <!-- Mejorar las pestañas -->
+          <!-- Tabs -->
           <nav class="flex gap-2" aria-label="Secciones de la canción">
             <button class="px-3 py-1 text-white bg-blue-600 rounded tab-btn active" data-tab="author">Autor</button>
             <button class="px-3 py-1 text-gray-700 bg-gray-100 rounded tab-btn hover:bg-gray-200"
@@ -115,7 +113,6 @@
               data-tab="listen">Escuchar</button>
           </nav>
 
-          <!-- Contenedores por tab -->
           <div id="tab-author" class="hidden mt-4 text-sm text-gray-700 tab-content"></div>
           <div id="tab-reflection" class="hidden mt-4 text-sm text-gray-700 tab-content"></div>
           <div id="tab-listen" class="hidden mt-4 tab-content">
@@ -123,7 +120,7 @@
           </div>
         </div>
 
-        <!-- Navegación simple: flechas Prev / Next -->
+        <!-- Navegación canciones -->
         <div class="flex items-center justify-between mt-6">
           <button id="prev-btn"
             class="px-4 py-2 text-gray-700 bg-gray-100 rounded hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed">
@@ -138,14 +135,14 @@
       </div>
     </section>
 
-    <div class="mt-6">
+    <div class="mt-6 text-center">
       <a href="./index.html" class="text-blue-600 hover:underline">← Volver al inicio</a>
     </div>
   </main>
 
-  <!-- Nuevo script específico para cancion.html -->
   <script src="./src/js/cancion.js"></script>
-  <!-- Animated footer waves -->
+
+  <!-- Footer waves -->
   <div class="footer-waves" aria-hidden="true">
     <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
       <g transform="translate(0,0)">

@@ -68,38 +68,80 @@
   </header>
   <!-- Contenedor principal -->
   <main class="max-w-4xl p-6 mx-auto">
-    <!-- Introducción breve -->
-    <section class="mb-6">
-      <h1 class="text-2xl">Reflexiones sobre letras</h1>
-      <p class="mt-2 text-gray-600">Un espacio para encontrar el significado en tu cancion favorita.</p>
+    <!-- Título y descripción del blog -->
+    <section class="mb-8 text-center">
+      <h1 class="mb-3 text-3xl text-gray-800 font-display sm:text-4xl">
+        Música en voz baja
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-lg leading-relaxed text-gray-600">
+        Fragmentos, historias y por qué algunas canciones se quedan.
+      </p>
     </section>
 
-    <!-- Grid de posts: se renderizará dinámicamente desde data/post.json -->
-    <section aria-label="Listado de entradas" id="posts" class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-      <div id="posts-fallback" class="flex items-center justify-center p-8 text-gray-500 col-span-full">
-        <div class="text-center">
-          <div class="w-8 h-8 mx-auto mb-4 border-b-2 border-blue-500 rounded-full animate-spin"></div>
-          <p>Cargando reflexiones musicales...</p>
+
+    <!-- Añadir después de la introducción -->
+    <section
+      class="px-6 py-8 mb-12 -mx-6 border-l-4 border-blue-500 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl">
+      <div class="text-center">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm font-medium text-blue-700 bg-blue-100 rounded-full">
+          Lecturas destacadas
+        </div>
+        <h2 class="mb-2 text-xl font-semibold text-gray-800">Historias que viven en una estrofa</h2>
+        <p class="max-w-xl mx-auto text-gray-600">
+          Selecciones breves: posts que combinan contexto del autor, significado de las frases clave y una reflexión
+          personal. Perfecto para leer con auriculares.
+        </p>
+        <div class="mt-6">
+          <a href="./cancion.html" class="inline-block px-5 py-2 text-white bg-blue-600 rounded hover:bg-blue-700">Ver
+            todas las reflexiones</a>
         </div>
       </div>
     </section>
-    <!-- Explorar por género -->
-    <section id="genres" class="mt-12 mb-12 text-center">
-      <h2 class="mb-6 text-lg font-semibold">Explorar por género</h2>
-      <div class="flex flex-wrap justify-center gap-3">
-        <a href="./cancion.html?genre=Rock" class="px-3 py-2 text-sm bg-gray-100 rounded hover:bg-gray-200">Rock</a>
-        <a href="./cancion.html?genre=Pop" class="px-3 py-2 text-sm bg-gray-100 rounded hover:bg-gray-200">Pop</a>
-        <a href="./cancion.html?genre=Indie" class="px-3 py-2 text-sm bg-gray-100 rounded hover:bg-gray-200">Indie</a>
-        <a href="./cancion.html?genre=Electrónica"
-          class="px-3 py-2 text-sm bg-gray-100 rounded hover:bg-gray-200">Electrónica</a>
+
+
+    <!-- Grid de posts: se renderizará dinámicamente desde data/post.json -->
+    <section aria-label="Listado de entradas" id="posts"
+      class="grid grid-cols-1 gap-6 sm:grid-cols-2 justify-items-center">
+      <div id="posts-fallback" class="flex flex-col items-center justify-center p-12 text-gray-500 col-span-full">
+        <div class="relative">
+          <div class="w-16 h-16 border-4 border-blue-200 rounded-full animate-pulse"></div>
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 font-medium text-white transition-all duration-200 rounded-lg bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500">
+          </div>
+        </div>
+        <p class="mt-4 text-lg font-medium">Cargando reflexiones musicales...</p>
+        <p class="text-sm text-gray-400">Preparando el contenido más inspirador</p>
       </div>
     </section>
-
-
-
+    <!-- Explorar por género -->
+    <section id="genres" class="mt-16 mb-12">
+      <div class="mb-8 text-center">
+        <h2 class="mb-3 text-2xl font-semibold">Explorar por género</h2>
+        <p class="text-gray-600">Descubre reflexiones organizadas por estilo musical</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="./cancion.html?genre=Rock"
+          class="px-6 py-3 font-medium text-gray-700 transition-all duration-300 bg-white border border-gray-200 rounded-full shadow-md hover:shadow-lg hover:bg-gradient-to-r hover:from-blue-300 hover:to-purple-300 hover:text-gray-900">
+          Rock
+        </a>
+        <a href="./cancion.html?genre=Pop"
+          class="px-6 py-3 font-medium text-gray-700 transition-all duration-300 bg-white border border-gray-200 rounded-full shadow-md hover:shadow-lg hover:bg-gradient-to-r hover:from-blue-300 hover:to-purple-300 hover:text-gray-900">
+          Pop
+        </a>
+        <a href="./cancion.html?genre=Indie"
+          class="px-6 py-3 font-medium text-gray-700 transition-all duration-300 bg-white border border-gray-200 rounded-full shadow-md hover:shadow-lg hover:bg-gradient-to-r hover:from-blue-300 hover:to-purple-300 hover:text-gray-900">
+          Indie
+        </a>
+        <a href="./cancion.html?genre=Electrónica"
+          class="px-6 py-3 font-medium text-gray-700 transition-all duration-300 bg-white border border-gray-200 rounded-full shadow-md hover:shadow-lg hover:bg-gradient-to-r hover:from-blue-300 hover:to-purple-300 hover:text-gray-900">
+          Electrónica
+        </a>
+      </div>
+    </section>
   </main>
 
-  <!-- Scripts: archivo JS principal (puede estar vacío por ahora) -->
   <script src="./src/js/main.js"></script>
   <!-- Animated footer waves -->
   <div class="footer-waves" aria-hidden="true">
